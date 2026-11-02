@@ -1,14 +1,16 @@
 "use strict";
+const chinesePage = document.documentElement.lang.toLowerCase().startsWith("zh");
+const siteRoot = new URL(chinesePage ? "../" : "./", document.baseURI);
 function mediaUrl(value) {
   if (typeof value !== "string" || !value.trim()) return null;
   try {
-    const url = new URL(value, document.baseURI);
+    const url = new URL(value, siteRoot);
     return ["https:", "http:"].includes(url.protocol) ? url.href : null;
   } catch { return null; }
 }
 async function loadProjectMedia() {
   try {
-    const response = await fetch("assets/media.json", {cache: "no-cache"});
+    const response = await fetch(new URL(chinesePage ? "assets/media.zh.json" : "assets/media.json", siteRoot), {cache: "no-cache"});
     if (!response.ok) return;
     const config = await response.json();
     document.querySelectorAll("[data-media-id]").forEach(frame => {
@@ -66,3 +68,7 @@ document.addEventListener("play", event => {
     if (video !== event.target && !video.paused) video.pause();
   });
 }, true);
+
+// Language changes keep the visitor on the same project section.
+const languageSwitch = document.querySelector(".language-switch");
+if (languageSwitch && location.hash) languageSwitch.hash = location.hash;

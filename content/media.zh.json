@@ -1,0 +1,63 @@
+{
+  "table-tennis": {
+    "type": "video",
+    "src": "assets/table-tennis/continuous-rallies-ai-87s.mp4",
+    "poster": "assets/table-tennis/continuous-rallies-ai-87s.jpg",
+    "alt": "人形机器人乒乓球连续对打",
+    "caption": "",
+    "muted": true,
+    "preview": "assets/table-tennis/forehand-backhand-full.gif",
+    "previewAlt": "人形机器人正反手击球"
+  },
+  "agent": {
+    "type": "video",
+    "src": "",
+    "poster": "",
+    "alt": "多模态 Agent 系统演示",
+    "caption": ""
+  },
+  "vla": {
+    "type": "video",
+    "src": "assets/vla/pi05-cup.mp4",
+    "poster": "assets/vla/pi05-cup.jpg",
+    "alt": "Franka机械臂纸杯抓取与放置实验",
+    "caption": "",
+    "muted": true,
+    "preview": "assets/vla/grasp-preview.gif",
+    "previewAlt": "π0.5纸杯抓取与放置的6秒真机片段"
+  },
+  "planning": {
+    "type": "video",
+    "src": "",
+    "poster": "",
+    "alt": "端到端规划质量评估项目演示",
+    "caption": ""
+  },
+  "tianchi-2022": {
+    "type": "video",
+    "src": "assets/tianchi-2022/continuous-overtaking-cropped.mp4",
+    "poster": "assets/tianchi-2022/continuous-overtaking-cropped.jpg",
+    "muted": true,
+    "alt": "天池算法赛连续超车仿真回放",
+    "preview": "assets/tianchi-2022/continuous-overtaking-wide.gif",
+    "previewAlt": "天池算法赛原答辩素材：连续超车仿真动图"
+  },
+  "iros-2023": {
+    "type": "video",
+    "src": "assets/iros-2023/robot-experiment.mp4",
+    "poster": "assets/iros-2023/robot-experiment.jpg",
+    "muted": true,
+    "alt": "IROS2023多机器人实物追逃实验",
+    "preview": "assets/iros-2023/robot-preview.gif",
+    "previewAlt": "IROS2023六机器人实物追逃实验的4秒典型片段"
+  },
+  "sketch-robot": {
+    "type": "video",
+    "src": "assets/sketch-robot/drawing-demo.mp4",
+    "poster": "assets/sketch-robot/drawing-demo.jpg",
+    "muted": true,
+    "alt": "Franka机械臂素描绘画真机演示",
+    "preview": "assets/sketch-robot/drawing-preview.gif",
+    "previewAlt": "Franka机械臂绘制人像的4秒真机片段"
+  }
+}

@@ -236,3 +236,24 @@
 .vla-video-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:18px 0;align-items:start}
 .vla-video-pair .vla-video{margin:0;min-width:0}.vla-portrait-pair{max-width:540px;margin:18px auto}
 @media(max-width:650px){.vla-video-pair{grid-template-columns:1fr;gap:20px}.vla-portrait-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+
+/* Shared bilingual header and authentic-photo framing. */
+.site-header .language-switch{padding-left:0;margin-left:0;white-space:nowrap}
+.language-divider{width:1px;height:14px;background:var(--line);align-self:center;margin-inline:-8px;pointer-events:none;user-select:none}
+.about{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:30px;align-items:start}
+.about-copy{grid-column:1;grid-row:1}.profile-photo{grid-column:2;grid-row:1;width:180px;height:180px;overflow:hidden;margin-top:5px;border-radius:50%}
+.profile-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:57% 46%;transform:scale(1.28)}
+html[lang=en] .awards-table tbody th{white-space:normal}
+html[lang=en] .award-result-col{width:190px}html[lang=en] .award-result{white-space:normal}
+html[lang=en] .history-title{min-width:0;flex:1}
+html[lang=en] .project-toc-inner{line-height:1.6}
+@media(max-width:650px){
+ .site-header nav{gap:18px;flex-wrap:wrap}.language-divider{margin-inline:-5px}
+ .about{display:block}.about:after{content:"";display:table;clear:both}.about-copy{display:contents}
+ .profile-photo{float:right;width:108px;height:108px;margin:3px 0 12px 17px}
+ .home-page .about h1{font-size:25px;line-height:1.45;margin-bottom:13px}
+ .home-page .about h1 span{font-size:15px;margin-left:5px}
+ html[lang=en] .award-result-col{width:125px}
+}
+html[lang=en] .patent-line{grid-template-columns:minmax(0,1fr) auto max-content auto}
+@media(max-width:650px){html[lang=en] .patent-line{grid-template-columns:minmax(0,1fr) auto auto}html[lang=en] .patent-line h3{grid-column:1/-1}html[lang=en] .patent-number{grid-column:1}}

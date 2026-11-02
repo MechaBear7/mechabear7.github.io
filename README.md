@@ -1,7 +1,20 @@
 # Helei Yang · 杨贺磊
 
-个人主页：**https://mechabear7.github.io/**
+[Personal website / 个人主页](https://mechabear7.github.io/) · [中文](https://mechabear7.github.io/zh/index.html)
 
-履历、机器人与 Agent 项目、论文、竞赛和专利。采用原生 HTML/CSS/JavaScript，GitHub Pages 从 `main` 分支根目录发布，无构建依赖。
+Projects, experience, publications, competitions, patents, and academic service. English is the default; every page has a matching Chinese version.
 
-后续内容先在本地调试，确认发布后再推送。视频保留控制条，不自动播放；列表使用短片段 GIF。
+## Maintain both languages
+
+- Chinese templates: `content/zh/`
+- English translations: `content/en.json`
+- Media metadata: `content/media.zh.json`
+- Shared presentation: `styles.css`, `app.js`, and `assets/`
+
+After editing, regenerate both languages:
+
+```sh
+python3 build_bilingual.py --output .
+```
+
+The build stops if an English translation is missing. Do not edit generated HTML or media catalogs directly. Preview locally before publishing; push only when publication is requested. GitHub Pages publishes the `main` branch root, with `.nojekyll` and no framework dependencies.
